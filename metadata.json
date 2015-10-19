@@ -1,0 +1,31 @@
+{
+    "author": "konstantin",
+    "dependencies": [
+        {
+            "name": "puppetlabs-stdlib",
+            "version_requirement": ">= 1.0.0"
+        }
+    ],
+    "issues_url": "https://github.com/soylent/konstantin-fluentd/issues",
+    "license": "Apache-2.0",
+    "name": "konstantin-fluentd",
+    "operatingsystem_support": [
+        {
+            "operatingsystem": "CentOS",
+            "operatingsystemrelease": [
+                "7.0"
+            ]
+        }
+    ],
+    "project_page": "https://github.com/soylent/konstantin-fluentd",
+    "source": "https://github.com/soylent/konstantin-fluentd",
+    "summary": "Installs, configures, and manages the Fluentd service",
+    "tags": [
+        "fluentd",
+        "fluent",
+        "td-agent",
+        "treasuredata",
+        "logging"
+    ],
+    "version": "0.1.0"
+}
