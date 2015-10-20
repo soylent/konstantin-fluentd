@@ -131,7 +131,8 @@ Bug reports and pull requests are welcome!
 
 ### TODO:
 
-* Support other OS families
+* Support Ubuntu
+* Support Debian
 * Support Fluentd filter plugins
 * Remove `rubygems` package dependency
 * Param validations
