@@ -111,6 +111,10 @@ Default value: running
 
 Default value: true
 
+#### `service_manage`
+
+Default value: true
+
 #### `config_file`
 
 Default value: '/etc/td-agent/td-agent.conf'

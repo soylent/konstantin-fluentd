@@ -14,6 +14,7 @@ class fluentd::params {
   $service_name = 'td-agent'
   $service_ensure = running
   $service_enable = true
+  $service_manage = true
 
   $config_file = '/etc/td-agent/td-agent.conf'
   $config_template = 'fluentd/td-agent.conf.erb'

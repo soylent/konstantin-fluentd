@@ -11,6 +11,7 @@ class fluentd (
   $service_name = $fluentd::service_name,
   $service_ensure = $fluentd::service_ensure,
   $service_enable = $fluentd::service_enable,
+  $service_manage = $fluentd::service_manage,
   $config_file = $fluentd::config_file,
   $config_template = $fluentd::config_template,
   $config = $fluentd::params::config,
