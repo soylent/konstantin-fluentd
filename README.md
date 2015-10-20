@@ -139,4 +139,3 @@ Bug reports and pull requests are welcome!
 * Support Debian
 * Support Fluentd filter plugins
 * Remove `rubygems` package dependency
-* Param validations

@@ -17,6 +17,24 @@ class fluentd (
   $config = $fluentd::params::config,
 ) inherits fluentd::params {
 
+  # Param validations
+  validate_string($repo_name)
+  validate_string($repo_baseurl)
+  validate_bool($repo_enabled)
+  validate_bool($repo_gpgcheck)
+  validate_string($repo_gpgkey)
+  validate_string($package_name)
+  validate_string($package_ensure)
+  validate_array($plugin_names)
+  validate_string($plugin_ensure)
+  validate_string($service_name)
+  validate_string($service_ensure)
+  validate_bool($service_enable)
+  validate_bool($service_manage)
+  validate_absolute_path($config_file)
+  validate_string($config_template)
+  validate_hash($config)
+
   contain fluentd::install
   contain fluentd::config
   contain fluentd::service
