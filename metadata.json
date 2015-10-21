@@ -4,6 +4,10 @@
         {
             "name": "puppetlabs/stdlib",
             "version_requirement": ">= 1.0.0"
+        },
+        {
+            "name": "puppetlabs/apt",
+            "version_requirement": ">= 1.0.0"
         }
     ],
     "issues_url": "https://github.com/soylent/konstantin-fluentd/issues",
@@ -14,6 +18,12 @@
             "operatingsystem": "CentOS",
             "operatingsystemrelease": [
                 "7.0"
+            ]
+        },
+        {
+            "operatingsystem": "Ubuntu",
+            "operatingsystemrelease": [
+                "14.04"
             ]
         }
     ],

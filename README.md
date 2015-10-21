@@ -67,7 +67,7 @@ The following parameters are available in the `fluentd` class:
 
 Default value: 'treasuredata'
 
-#### `repo_baseurl`
+#### `repo_url`
 
 Default value: 'http://packages.treasuredata.com/2/redhat/$releasever/$basearch'
 
@@ -82,6 +82,10 @@ Default value: true
 #### `repo_gpgkey`
 
 Default value: 'https://packages.treasuredata.com/GPG-KEY-td-agent'
+
+#### `repo_gpgkeyid`
+
+Default value: 'C901622B5EC4AF820C38AB861093DB45A12E206F'
 
 #### `package_name`
 
@@ -127,7 +131,7 @@ Default value: 'fluentd/td-agent.conf.erb'
 
 ## Limitations
 
-CentOS 7 only
+CentOS 7, Ubuntu 14.04 only
 
 ## Development
 

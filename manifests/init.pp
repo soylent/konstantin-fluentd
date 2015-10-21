@@ -1,9 +1,10 @@
 class fluentd (
   $repo_name = $fluentd::repo_name,
-  $repo_baseurl = $fluentd::repo_baseurl,
+  $repo_url = $fluentd::repo_url,
   $repo_enabled = $fluentd::repo_enabled,
   $repo_gpgcheck = $fluentd::repo_gpgcheck,
   $repo_gpgkey = $fluentd::repo_gpgkey,
+  $repo_gpgkeyid = $fluentd::repo_gpgkeyid,
   $package_name = $fluentd::package_name,
   $package_ensure = $fluentd::package_ensure,
   $plugin_names = $fluentd::plugin_names,
@@ -19,10 +20,11 @@ class fluentd (
 
   # Param validations
   validate_string($repo_name)
-  validate_string($repo_baseurl)
+  validate_string($repo_url)
   validate_bool($repo_enabled)
   validate_bool($repo_gpgcheck)
   validate_string($repo_gpgkey)
+  validate_string($repo_gpgkeyid)
   validate_string($package_name)
   validate_string($package_ensure)
   validate_array($plugin_names)
