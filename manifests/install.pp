@@ -30,14 +30,14 @@ class fluentd::install inherits fluentd {
         architecture => 'amd64',
         release      => $fluentd::distro_codename,
         key          => {
-          id         => $fluentd::repo_gpgkeyid,
-          source     => $fluentd::repo_gpgkey,
+          id     => $fluentd::repo_gpgkeyid,
+          source => $fluentd::repo_gpgkey,
         },
-        include => {
+        include      => {
           'src' => false,
           'deb' => true,
         },
-        before   => Package[$fluentd::package_name],
+        before       => Package[$fluentd::package_name],
       }
     }
 
