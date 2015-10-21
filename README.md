@@ -131,7 +131,7 @@ Default value: 'fluentd/td-agent.conf.erb'
 
 ## Limitations
 
-CentOS 7, Ubuntu 14.04 only
+Tested only on CentOS 7, Ubuntu 14.04, Debian 7.8
 
 ## Development
 
