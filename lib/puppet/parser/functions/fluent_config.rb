@@ -15,26 +15,17 @@ module Puppet::Parser::Functions
       end
     end
 
-    config_format = %{
-      <%<plugin_type>s %<tag_pattern>s>
-        %<config_body>s
-      </%<plugin_type>s>
-    }
-
-    format(config_format,
-      plugin_type: plugin_type,
-      tag_pattern: tag_pattern,
-      config_body: config_body
-    )
+    "<#{plugin_type} #{tag_pattern}>\n#{config_body}</#{plugin_type}>\n\n"
   end
 
   newfunction(:fluent_config, type: :rvalue) do |args|
     config = args[0]
 
-    config.each_with_object('') do |(plugin_type, plugin_configs), result|
+    header = "# td-agent config, managed by Puppet.\n"
+    config.each_with_object(header) do |(plugin_type, plugin_configs), result|
       plugin_configs.each do |plugin_config|
         result << function_fluent_plugin_config([plugin_type, plugin_config])
       end
-    end
+    end.chomp
   end
 end
