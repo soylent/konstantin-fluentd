@@ -1,7 +1,7 @@
 ## 2015-10-22 - Release v. 0.2.0
 
 - Add param service_manage
-- Add param repo_pgpkeyid
+- Add param repo_gpgkeyid
 - Add param repo_install
 - Add param plugin_source
 - Rename param repo_baseurl to repo_url
