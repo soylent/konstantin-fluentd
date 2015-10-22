@@ -63,6 +63,10 @@ class { 'fluentd':
 
 The following parameters are available in the `fluentd` class:
 
+#### `repo_install`
+
+Default value: true
+
 #### `repo_name`
 
 Default value: 'treasuredata'

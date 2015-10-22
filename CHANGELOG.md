@@ -2,6 +2,7 @@
 
 - Add param service_manage
 - Add param repo_pgpkeyid
+- Add param repo_install
 - Rename param repo_baseurl to repo_url
 - Remove param config_template
 - Param validation

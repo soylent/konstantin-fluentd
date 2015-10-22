@@ -1,4 +1,5 @@
 class fluentd (
+  $repo_install = $fluentd::repo_install,
   $repo_name = $fluentd::repo_name,
   $repo_url = $fluentd::repo_url,
   $repo_enabled = $fluentd::repo_enabled,
@@ -18,6 +19,7 @@ class fluentd (
 ) inherits fluentd::params {
 
   # Param validations
+  validate_bool($repo_install)
   validate_string($repo_name)
   validate_string($repo_url)
   validate_bool($repo_enabled)

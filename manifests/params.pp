@@ -1,4 +1,5 @@
 class fluentd::params {
+  $repo_install = true
   $repo_name = 'treasuredata'
 
   case $::osfamily {
@@ -38,7 +39,7 @@ class fluentd::params {
     'source' => [
       { 'type' => 'forward' }
     ],
-    'match' => [
+    'match'  => [
       { 'tag_pattern' => '**', 'type' => 'stdout' }
     ]
   }
