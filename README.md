@@ -15,7 +15,7 @@ Install, configure, and manage Fluentd data collector.
 
 ## Module Description
 
-* Installs `td-agent` RPM package
+* Installs `td-agent` package
 * Generates configuration file `td-agent.conf`
 * Manages `td-agent` service
 * Installs Fluentd gem plugins
@@ -106,6 +106,10 @@ Default value: []
 #### `plugin_ensure`
 
 Default value: present
+
+#### `plugin_source`
+
+Default value: 'https://rubygems.org'
 
 #### `service_name`
 

@@ -9,6 +9,7 @@ class fluentd::install inherits fluentd {
 
   package { $fluentd::plugin_names:
     ensure   => $fluentd::plugin_ensure,
+    source   => $fluentd::plugin_source,
     provider => tdagent,
   }
 }

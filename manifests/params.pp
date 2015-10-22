@@ -28,6 +28,7 @@ class fluentd::params {
 
   $plugin_names = []
   $plugin_ensure = present
+  $plugin_source = 'https://rubygems.org'
 
   $service_name = 'td-agent'
   $service_ensure = running

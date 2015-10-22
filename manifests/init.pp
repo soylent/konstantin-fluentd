@@ -10,6 +10,7 @@ class fluentd (
   $package_ensure = $fluentd::package_ensure,
   $plugin_names = $fluentd::plugin_names,
   $plugin_ensure = $fluentd::plugin_ensure,
+  $plugin_source = $fluentd::plugin_source,
   $service_name = $fluentd::service_name,
   $service_ensure = $fluentd::service_ensure,
   $service_enable = $fluentd::service_enable,
@@ -30,6 +31,7 @@ class fluentd (
   validate_string($package_ensure)
   validate_array($plugin_names)
   validate_string($plugin_ensure)
+  validate_string($plugin_source)
   validate_string($service_name)
   validate_string($service_ensure)
   validate_bool($service_enable)
