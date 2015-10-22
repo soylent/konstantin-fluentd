@@ -1,4 +1,4 @@
-## Unreleased
+## 2015-10-22 - Release v. 0.2.0
 
 - Add param service_manage
 - Add param repo_pgpkeyid
