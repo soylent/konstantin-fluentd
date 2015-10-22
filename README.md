@@ -123,10 +123,6 @@ Default value: true
 
 Default value: '/etc/td-agent/td-agent.conf'
 
-#### `config_template`
-
-Default value: 'fluentd/td-agent.conf.erb'
-
 #### `config`
 
 ## Limitations
@@ -139,7 +135,4 @@ Bug reports and pull requests are welcome!
 
 ### TODO:
 
-* Support Ubuntu
-* Support Debian
-* Support Fluentd filter plugins
 * Remove `rubygems` package dependency

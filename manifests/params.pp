@@ -34,7 +34,6 @@ class fluentd::params {
   $service_manage = true
 
   $config_file = '/etc/td-agent/td-agent.conf'
-  $config_template = 'fluentd/td-agent.conf.erb'
   $config = {
     'source' => [
       { 'type' => 'forward' }

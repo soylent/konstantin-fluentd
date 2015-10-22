@@ -14,7 +14,6 @@ class fluentd (
   $service_enable = $fluentd::service_enable,
   $service_manage = $fluentd::service_manage,
   $config_file = $fluentd::config_file,
-  $config_template = $fluentd::config_template,
   $config = $fluentd::params::config,
 ) inherits fluentd::params {
 
@@ -34,7 +33,6 @@ class fluentd (
   validate_bool($service_enable)
   validate_bool($service_manage)
   validate_absolute_path($config_file)
-  validate_string($config_template)
   validate_hash($config)
 
   contain fluentd::install
