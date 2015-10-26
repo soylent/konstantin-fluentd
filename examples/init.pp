@@ -1,13 +1,12 @@
 class { 'fluentd':
-  plugin_names => ['fluent-plugin-elasticsearch'],
-  config       => {
+  config  => {
     source => [
       {
         type => 'unix',
         path => '/tmp/fluent.sock'
       }
     ],
-    match  => [
+    match => [
       {
         tag_pattern     => '**',
         type            => 'elasticsearch',
@@ -18,3 +17,5 @@ class { 'fluentd':
     ]
   }
 }
+
+fluentd::plugin { 'fluent-plugin-elasticsearch': }
