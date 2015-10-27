@@ -17,30 +17,30 @@ Install, configure, and manage Fluentd data collector.
 
 * Installs `td-agent` package
 * Generates configuration file `td-agent.conf`
+* Generates custom configuration files and saves them to `config.d/`
 * Manages `td-agent` service
 * Installs Fluentd gem plugins
 
 ## Usage
 
 ```puppet
-class { 'fluentd':
-  plugin_names => ['fluent-plugin-elasticsearch'],
-  config       => {
-    source => [
-      {
-        type => 'unix',
-        path => '/tmp/fluent.sock'
-      }
-    ],
-    match  => [
-      {
-        tag_pattern     => '**',
-        type            => 'elasticsearch',
-        index_name      => 'foo',
-        type_name       => 'bar',
-        logstash_format => true
-      }
-    ]
+include fluentd
+
+fluentd::plugin { 'fluent-plugin-elasticsearch': }
+
+fluentd::config { 'elasticsearch.conf':
+  config => {
+    source => {
+      type => 'unix',
+      path => '/tmp/fluent.sock',
+    },
+    match  => {
+      tag_pattern     => '**',
+      type            => 'elasticsearch',
+      index_name      => 'foo',
+      type_name       => 'bar',
+      logstash_format => true,
+    }
   }
 }
 ```
@@ -56,7 +56,6 @@ class { 'fluentd':
 #### Private Classes
 
 * `fluentd::install`: Handles the packages.
-* `fluentd::config`: Handles the configuration file.
 * `fluentd::service`: Handles the service.
 
 ### Parameters
@@ -99,18 +98,6 @@ Default value: 'td-agent'
 
 Default value: present
 
-#### `plugin_names`
-
-Default value: []
-
-#### `plugin_ensure`
-
-Default value: present
-
-#### `plugin_source`
-
-Default value: 'https://rubygems.org'
-
 #### `service_name`
 
 Default value: 'td-agent'
@@ -131,7 +118,34 @@ Default value: true
 
 Default value: '/etc/td-agent/td-agent.conf'
 
+### Public Defines
+
+* `fluentd::config`: Generates custom configuration files.
+* `fluentd::plugin`: Installs plugins.
+
+The following parameters are available in the `fluentd::plugin` defined type:
+
+#### `title`
+
+Plugin name
+
+#### `plugin_ensure`
+
+Default value: present
+
+#### `plugin_source`
+
+Default value: 'https://rubygems.org'
+
+The following parameters are available in the `fluentd::config` defined type:
+
+#### `title`
+
+Config filename
+
 #### `config`
+
+Config Hash, please see usage example.
 
 ## Limitations
 

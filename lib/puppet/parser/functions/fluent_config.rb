@@ -21,11 +21,9 @@ module Puppet::Parser::Functions
   newfunction(:fluent_config, type: :rvalue) do |args|
     config = args[0]
 
-    header = "# td-agent config, managed by Puppet.\n"
-    config.each_with_object(header) do |(plugin_type, plugin_configs), result|
-      plugin_configs.each do |plugin_config|
-        result << function_fluent_plugin_config([plugin_type, plugin_config])
-      end
+    header = "# Managed by Puppet.\n"
+    config.each_with_object(header) do |(plugin_type, plugin_config), result|
+      result << function_fluent_plugin_config([plugin_type, plugin_config])
     end.chomp
   end
 end

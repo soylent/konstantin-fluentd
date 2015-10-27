@@ -1,16 +1,22 @@
+## 2015-20-27 - Release v. 0.3.0
+
+ - Remove class `fluentd::config`
+ - Add defined type `fluentd::config`
+ - Add defined type `fluentd::plugin`
+
 ## 2015-10-22 - Release v. 0.2.0
 
-- Add param service_manage
-- Add param repo_gpgkeyid
-- Add param repo_install
-- Add param plugin_source
-- Rename param repo_baseurl to repo_url
-- Remove param config_template
-- Param validation
-- Support Ubuntu 14.04
-- Support Debian 7.8
-- Support nested config tags
+ - Add param `service_manage`
+ - Add param `repo_gpgkeyid`
+ - Add param `repo_install`
+ - Add param `plugin_source`
+ - Rename param `repo_baseurl` to `repo_url`
+ - Remove param `config_template`
+ - Param validation
+ - Support Ubuntu 14.04
+ - Support Debian 7.8
+ - Support nested config tags
 
 ## 2015-10-19 - Release v. 0.1.0
 
-- Initial release
+ - Initial release

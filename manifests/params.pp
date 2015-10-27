@@ -36,12 +36,5 @@ class fluentd::params {
   $service_manage = true
 
   $config_file = '/etc/td-agent/td-agent.conf'
-  $config = {
-    'source' => [
-      { 'type' => 'forward' }
-    ],
-    'match'  => [
-      { 'tag_pattern' => '**', 'type' => 'stdout' }
-    ]
-  }
+  $config_path = '/etc/td-agent/config.d'
 }

@@ -6,4 +6,12 @@ RSpec.describe 'fluentd::service' do
 
     it { is_expected.to contain_service('td-agent') }
   end
+
+  context 'on Debian based system' do
+    let(:facts) do
+      { osfamily: 'Debian', lsbdistid: 'Ubuntu', lsbdistcodename: 'trusty' }
+    end
+
+    it { is_expected.to contain_service('td-agent') }
+  end
 end
