@@ -23,6 +23,8 @@ Install, configure, and manage Fluentd data collector.
 
 ## Usage
 
+### Routing events to Elasticsearch
+
 ```puppet
 include fluentd
 
@@ -30,16 +32,39 @@ fluentd::plugin { 'fluent-plugin-elasticsearch': }
 
 fluentd::config { 'elasticsearch.conf':
   config => {
-    source => {
-      type => 'unix',
-      path => '/tmp/fluent.sock',
+    'source' => {
+      'type' => 'unix',
+      'path' => '/tmp/fluent.sock',
     },
-    match  => {
-      tag_pattern     => '**',
-      type            => 'elasticsearch',
-      index_name      => 'foo',
-      type_name       => 'bar',
-      logstash_format => true,
+    'match'  => {
+      'tag_pattern'     => '**',
+      'type'            => 'elasticsearch',
+      'index_name'      => 'foo',
+      'type_name'       => 'bar',
+      'logstash_format' => true,
+    }
+  }
+}
+```
+
+### Forwarding events to Fluentd aggregator
+
+```puppet
+include fluentd
+
+fluentd::config { 'forwarding.conf':
+  config => {
+    'source' => {
+      'type' => unix,
+      'path' => '/tmp/td-agent/td-agent.sock',
+    },
+    'match'  => {
+      'tag_pattern' => '**',
+      'type'        => forward,
+      'server'      => [
+        { 'host' => 'example1.com', 'port' => 24224 },
+        { 'host' => 'example2.com', 'port' => 24224 },
+      ]
     }
   }
 }
@@ -145,7 +170,7 @@ Config filename
 
 #### `config`
 
-Config Hash, please see usage example.
+Config Hash, please see usage examples.
 
 ## Limitations
 
