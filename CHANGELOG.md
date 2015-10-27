@@ -1,4 +1,4 @@
-## 2015-20-27 - Release v. 0.3.0
+## 2015-20-28 - Release v. 0.3.0
 
  - Remove class `fluentd::config`
  - Add defined type `fluentd::config`
