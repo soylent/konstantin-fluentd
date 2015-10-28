@@ -1,6 +1,7 @@
 class fluentd (
   $repo_install = $fluentd::repo_install,
   $repo_name = $fluentd::repo_name,
+  $repo_desc = $fluentd::repo_desc,
   $repo_url = $fluentd::repo_url,
   $repo_enabled = $fluentd::repo_enabled,
   $repo_gpgcheck = $fluentd::repo_gpgcheck,

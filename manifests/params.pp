@@ -1,6 +1,7 @@
 class fluentd::params {
   $repo_install = true
   $repo_name = 'treasuredata'
+  $repo_desc = 'TreasureData'
 
   case $::osfamily {
     'redhat': {
