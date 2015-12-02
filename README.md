@@ -30,7 +30,7 @@ include fluentd
 
 fluentd::plugin { 'fluent-plugin-elasticsearch': }
 
-fluentd::config { 'elasticsearch.conf':
+fluentd::config { '500_elasticsearch.conf':
   config => {
     'source' => {
       'type' => 'unix',
@@ -52,7 +52,7 @@ fluentd::config { 'elasticsearch.conf':
 ```puppet
 include fluentd
 
-fluentd::config { 'forwarding.conf':
+fluentd::config { '600_forwarding.conf':
   config => {
     'source' => {
       'type' => unix,
@@ -69,6 +69,13 @@ fluentd::config { 'forwarding.conf':
   }
 }
 ```
+
+### Config File Naming
+
+All configs employ a numbering system in the resource's title that is used for
+ordering. When titling your config, make sure you prefix the filename with a
+number, for example, '999_catch_all.conf', '500_elasticsearch.conf'. 999 has
+smaller priority than 500.
 
 ## Reference
 
@@ -183,6 +190,16 @@ Tested only on CentOS 7, Ubuntu 14.04, Debian 7.8
 ## Development
 
 Bug reports and pull requests are welcome!
+
+### Running Tests
+
+    $ bundle install
+    $ bundle exec rspec
+    $ bundle exec rake beaker BEAKER_set=debian-78-x64
+    $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
+    $ bundle exec rake lint
+
+Relevant Beaker docs: https://github.com/puppetlabs/beaker/blob/master/docs/How-to-Write-a-Beaker-Test-for-a-Module.md
 
 ### TODO:
 
