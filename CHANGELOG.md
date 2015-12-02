@@ -1,8 +1,10 @@
 ## Unreleased
 
+## 2015-12-02 - Release v. 0.3.1
+
  - Add param `repo_desc`
 
-## 2015-20-28 - Release v. 0.3.0
+## 2015-10-28 - Release v. 0.3.0
 
  - Remove class `fluentd::config`
  - Add defined type `fluentd::config`
