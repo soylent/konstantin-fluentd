@@ -12,7 +12,7 @@ Install, configure, and manage Fluentd data collector.
 
 ## Usage
 
-### Routing events to Elasticsearch
+### Routing Events To Elasticsearch
 
 ```puppet
 include fluentd
@@ -36,7 +36,7 @@ fluentd::config { '500_elasticsearch.conf':
 }
 ```
 
-### Forwarding events to Fluentd aggregator
+### Forwarding Events To Fluentd Aggregator
 
 ```puppet
 include fluentd
@@ -63,8 +63,8 @@ fluentd::config { '600_forwarding.conf':
 
 All configs employ a numbering system in the resource's title that is used for
 ordering. When titling your config, make sure you prefix the filename with a
-number, for example, '999_catch_all.conf', '500_elasticsearch.conf'. 999 has
-smaller priority than 500.
+number, for example, `999_catch_all.conf`, `500_elasticsearch.conf` (999 has
+smaller priority than 500)
 
 ## Reference
 
@@ -184,6 +184,7 @@ Bug reports and pull requests are welcome!
 
     $ bundle install
     $ bundle exec rspec
+    $ bundle exec rake beaker
     $ bundle exec rake beaker BEAKER_set=debian-78-x64
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
     $ bundle exec rake lint
