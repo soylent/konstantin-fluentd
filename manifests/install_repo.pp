@@ -30,8 +30,8 @@ class fluentd::install_repo inherits fluentd {
         architecture => 'amd64',
         release      => $fluentd::distro_codename,
         key          => {
-          id         => $fluentd::repo_gpgkeyid,
-          source     => $fluentd::repo_gpgkey,
+          id     => $fluentd::repo_gpgkeyid,
+          source => $fluentd::repo_gpgkey,
         },
         include      => {
           'src' => false,
