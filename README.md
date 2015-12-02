@@ -23,7 +23,7 @@ fluentd::config { '500_elasticsearch.conf':
   config => {
     'source' => {
       'type' => 'unix',
-      'path' => '/tmp/fluent.sock',
+      'path' => '/tmp/td-agent/td-agent.sock',
     },
     'match'  => {
       'tag_pattern'     => '**',
