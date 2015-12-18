@@ -1,4 +1,5 @@
 ## Unreleased
+ - Purge unmanaged config files
 
 ## 2015-12-02 - Release v. 0.3.1
 
