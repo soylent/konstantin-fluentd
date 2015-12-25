@@ -183,7 +183,7 @@ Bug reports and pull requests are welcome!
 ### Running Tests
 
     $ bundle install
-    $ bundle exec rspec
+    $ bundle exec rake spec
     $ bundle exec rake beaker
     $ bundle exec rake beaker BEAKER_set=debian-78-x64
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
