@@ -1,5 +1,9 @@
 ## Unreleased
+
+## 2016-01-04 - Release v. 0.3.2
+
  - Purge unmanaged config files
+ - Manage td-agent.conf file with a fully qualified path
 
 ## 2015-12-02 - Release v. 0.3.1
 
