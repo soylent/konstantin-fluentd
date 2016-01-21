@@ -184,8 +184,8 @@ Bug reports and pull requests are welcome!
 
     $ bundle install
     $ bundle exec rake spec
-    $ bundle exec rake beaker
-    $ bundle exec rake beaker BEAKER_set=debian-78-x64
+    $ bundle exec rake beaker BEAKER_set=centos-7-x64
+    $ bundle exec rake beaker BEAKER_set=debian-7-amd64
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
     $ bundle exec rake lint
     $ bundle exec rake metadata

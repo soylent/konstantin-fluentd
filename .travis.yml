@@ -1,0 +1,16 @@
+---
+language: ruby
+sudo: required
+services:
+  - docker
+script:
+  - bundle exec rake beaker
+rvm: 2.2.3
+env:
+  global:
+    - PUPPET_INSTALL_VERSION="1.3.2"
+    - PUPPET_INSTALL_TYPE="agent"
+  matrix:
+    - BEAKER_set="centos-7-x64"
+    - BEAKER_set="debian-7-x64"
+    - BEAKER_set="ubuntu-server-1404-x64"

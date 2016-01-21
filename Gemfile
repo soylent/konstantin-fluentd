@@ -10,3 +10,4 @@ gem 'puppetlabs_spec_helper', '>= 0.8.2'
 
 gem 'beaker-rspec'
 gem 'beaker-puppet_install_helper'
+gem 'pry', require: false
