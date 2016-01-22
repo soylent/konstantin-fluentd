@@ -36,6 +36,10 @@ class fluentd::params {
   $service_enable = true
   $service_manage = true
 
+  # Workaround for the following issue:
+  # https://tickets.puppetlabs.com/browse/PUP-5296
+  $service_provider = if $::osfamily == 'redhat' { 'redhat' }
+
   $config_file = '/etc/td-agent/td-agent.conf'
   $config_path = '/etc/td-agent/config.d'
 }

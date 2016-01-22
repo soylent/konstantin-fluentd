@@ -4,6 +4,7 @@
 
  - Purge unmanaged config files
  - Manage td-agent.conf file with a fully qualified path
+ - Fix the issue with td-agent service being enabled on each run on EL7
 
 ## 2015-12-02 - Release v. 0.3.1
 
