@@ -1,5 +1,7 @@
 # Fluentd
 
+[![Build Status](https://travis-ci.org/soylent/konstantin-fluentd.svg?branch=master)](https://travis-ci.org/soylent/konstantin-fluentd)
+
 Install, configure, and manage Fluentd data collector.
 
 ## Module Description
