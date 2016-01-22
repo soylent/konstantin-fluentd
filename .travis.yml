@@ -12,5 +12,5 @@ env:
     - PUPPET_INSTALL_TYPE="agent"
   matrix:
     - BEAKER_set="centos-7-x64"
-    - BEAKER_set="debian-7-x64"
+    - BEAKER_set="debian-7-amd64"
     - BEAKER_set="ubuntu-server-1404-x64"
