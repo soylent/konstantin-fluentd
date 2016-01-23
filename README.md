@@ -185,12 +185,12 @@ Bug reports and pull requests are welcome!
 ### Running Tests
 
     $ bundle install
+    $ bundle exec rake lint
+    $ bundle exec rake metadata
     $ bundle exec rake spec
     $ bundle exec rake beaker BEAKER_set=centos-7-x64
     $ bundle exec rake beaker BEAKER_set=debian-7-amd64
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
-    $ bundle exec rake lint
-    $ bundle exec rake metadata
 
 Relevant Beaker docs: https://github.com/puppetlabs/beaker/blob/master/docs/How-to-Write-a-Beaker-Test-for-a-Module.md
 
