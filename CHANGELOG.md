@@ -1,4 +1,4 @@
-## Unreleased
+## 2016-02-03 - Release v. 0.4.0
 
  - Support CentOS 6
 
