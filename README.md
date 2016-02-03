@@ -176,7 +176,7 @@ Config Hash, please see usage examples.
 
 ## Limitations
 
-Tested only on CentOS 7, Ubuntu 14.04, Debian 7.8
+Tested on CentOS 6, CentOS 7, Ubuntu 14.04, Debian 7.8
 
 ## Development
 
@@ -188,6 +188,7 @@ Bug reports and pull requests are welcome!
     $ bundle exec rake lint
     $ bundle exec rake metadata
     $ bundle exec rake spec
+    $ bundle exec rake beaker BEAKER_set=centos-6-x64
     $ bundle exec rake beaker BEAKER_set=centos-7-x64
     $ bundle exec rake beaker BEAKER_set=debian-7-amd64
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
