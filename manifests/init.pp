@@ -12,6 +12,7 @@ class fluentd (
   $plugin_names = $fluentd::plugin_names,
   $plugin_ensure = $fluentd::plugin_ensure,
   $plugin_source = $fluentd::plugin_source,
+  $plugin_install_options = $fluentd::plugin_install_options,
   $service_name = $fluentd::service_name,
   $service_ensure = $fluentd::service_ensure,
   $service_enable = $fluentd::service_enable,
