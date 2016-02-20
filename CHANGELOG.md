@@ -1,3 +1,7 @@
+## 2016-02-20 - Release v. 0.5.0
+
+ - Add param `plugin_install_options` (@dembaca)
+
 ## 2016-02-03 - Release v. 0.4.0
 
  - Support CentOS 6
@@ -5,7 +9,7 @@
 ## 2016-01-22 - Release v. 0.3.2
 
  - Purge unmanaged config files
- - Manage td-agent.conf file with a fully qualified path
+ - Manage td-agent.conf file with a fully qualified path (@EmilienM)
  - Fix the issue with td-agent service being enabled on each run on EL7
 
 ## 2015-12-02 - Release v. 0.3.1
