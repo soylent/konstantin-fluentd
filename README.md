@@ -164,6 +164,15 @@ Default value: present
 
 Default value: 'https://rubygems.org'
 
+#### `plugin_install_options`
+
+Default value: []
+see https://docs.puppetlabs.com/puppet/latest/reference/type.html#package-provider-gem,
+e.g. 
+```puppet 
+  plugin_install_options => {'--http-proxy' => $http_proxy}`
+```
+
 The following parameters are available in the `fluentd::config` defined type:
 
 #### `title`
