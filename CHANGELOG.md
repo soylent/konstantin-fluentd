@@ -1,3 +1,7 @@
+## 2016-03-23 - Release v. 0.5.1
+
+ - Use fully qualified param names (@tosmi)
+
 ## 2016-02-20 - Release v. 0.5.0
 
  - Add param `plugin_install_options` (@dembaca)
