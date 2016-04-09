@@ -168,9 +168,10 @@ Default value: 'https://rubygems.org'
 
 Default value: []
 see https://docs.puppetlabs.com/puppet/latest/reference/type.html#package-provider-gem,
-e.g. 
-```puppet 
-  plugin_install_options => {'--http-proxy' => $http_proxy}`
+e.g.
+
+```puppet
+plugin_install_options => {'--http-proxy' => $http_proxy}`
 ```
 
 The following parameters are available in the `fluentd::config` defined type:
@@ -203,10 +204,6 @@ Bug reports and pull requests are welcome!
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
 
 Relevant Beaker docs: https://github.com/puppetlabs/beaker/blob/master/docs/How-to-Write-a-Beaker-Test-for-a-Module.md
-
-### TODO:
-
-* Remove `rubygems` package dependency
 
 ## License
 
