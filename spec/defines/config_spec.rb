@@ -8,32 +8,6 @@ RSpec.describe 'fluentd::config' do
 
     let(:title) { 'stdout.conf' }
 
-    context 'when config does not contain nested hashes' do
-      let(:params) do
-        {
-          config: {
-            'source' => {
-              'type' => 'forward'
-            },
-            'match' => {
-              'tag_pattern' => '**',
-              'type' => 'stdout'
-            }
-          }
-        }
-      end
-
-      it do
-        is_expected.to contain_file('/etc/td-agent/config.d/stdout.conf').
-          with_content(/<source >/).
-          with_content(/type forward/).
-          with_content(/<\/source>/).
-          with_content(/<match \*\*>/).
-          with_content(/type stdout/).
-          with_content(/<\/match>/)
-      end
-    end
-
     context 'when config contains nested hashes' do
       let(:params) do
         {
@@ -53,8 +27,8 @@ RSpec.describe 'fluentd::config' do
       it do
         is_expected.to contain_file('/etc/td-agent/config.d/stdout.conf').
           with_content(/<match \*\*>/).
-          with_content(/type forward/).
-          with_content(/<server >/).
+          with_content(/@type forward/).
+          with_content(/<server>/).
           with_content(/host example1.com/).
           with_content(/port 24224/).
           with_content(/<\/server>/).

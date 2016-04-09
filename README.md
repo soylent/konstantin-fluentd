@@ -198,6 +198,7 @@ Bug reports and pull requests are welcome!
     $ bundle exec rake lint
     $ bundle exec rake metadata
     $ bundle exec rake spec
+    $ bundle exec rspec spec/lib
     $ bundle exec rake beaker BEAKER_set=centos-6-x64
     $ bundle exec rake beaker BEAKER_set=centos-7-x64
     $ bundle exec rake beaker BEAKER_set=debian-7-amd64
