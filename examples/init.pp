@@ -4,10 +4,15 @@ fluentd::plugin { 'fluent-plugin-elasticsearch': }
 
 fluentd::config { '500_elasticsearch.conf':
   config => {
-    'source' => {
-      'type' => 'unix',
-      'path' => '/tmp/td-agent/td-agent.sock',
-    },
+    'source' => [
+      {
+        'type' => 'forward',
+      },
+      {
+        'type' => 'unix',
+        'path' => '/tmp/td-agent/td-agent.sock',
+      },
+    ],
     'match'  => {
       'tag_pattern'     => '**',
       'type'            => 'elasticsearch',
