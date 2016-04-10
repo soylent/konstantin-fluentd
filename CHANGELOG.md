@@ -1,3 +1,7 @@
+## 2016-04-11 - Release v. 0.6.0
+
+ - Rework config generation
+
 ## 2016-03-23 - Release v. 0.5.1
 
  - Use fully qualified param names (@tosmi)
