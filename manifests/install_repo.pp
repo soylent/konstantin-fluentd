@@ -15,11 +15,6 @@ class fluentd::install_repo inherits fluentd {
         path        => '/bin:/usr/bin',
         refreshonly => true,
       }
-
-      # TODO: Remove this dependency. Gem provider requires this package.
-      package { 'rubygems':
-        ensure => present,
-      }
     }
 
     'debian': {
