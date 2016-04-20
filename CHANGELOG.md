@@ -1,3 +1,8 @@
+## 2016-04-20 - Release v. 0.6.1
+
+ - Remove rubygems package
+ - Fix the issue with Ruby load path
+
 ## 2016-04-11 - Release v. 0.6.0
 
  - Rework config generation
