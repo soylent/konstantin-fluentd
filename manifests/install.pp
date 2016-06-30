@@ -11,7 +11,7 @@ class fluentd::install inherits fluentd {
     ensure  => directory,
     owner   => 'root',
     group   => 'root',
-    mode    => '0755',
+    mode    => '0750',
     recurse => true,
     force   => true,
     purge   => true,
@@ -22,6 +22,6 @@ class fluentd::install inherits fluentd {
     source => 'puppet:///modules/fluentd/td-agent.conf',
     owner  => 'root',
     group  => 'root',
-    mode   => '0644',
+    mode   => '0640',
   }
 }
