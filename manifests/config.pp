@@ -1,5 +1,5 @@
-define fluentd::config($config) {
-  $path = sprintf('/etc/td-agent/config.d/%s', $title)
+define fluentd::config($config, $config_path='/etc/td-agent/config.d') {
+  $path = sprintf("${config_path}/%s", $title)
 
   file { $path:
     ensure  => present,

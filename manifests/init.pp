@@ -16,11 +16,13 @@ class fluentd (
   $plugin_ensure = $::fluentd::params::plugin_ensure,
   $plugin_source = $::fluentd::params::plugin_source,
   $plugin_install_options = $::fluentd::params::plugin_install_options,
+  $plugin_provider = $::fluentd::params::plugin_provider,
   $service_name = $::fluentd::params::service_name,
   $service_ensure = $::fluentd::params::service_ensure,
   $service_enable = $::fluentd::params::service_enable,
   $service_manage = $::fluentd::params::service_manage,
   $config_file = $::fluentd::params::config_file,
+  $config_path = $::fluentd::params::config_path,
 ) inherits fluentd::params {
 
   # Param validations
