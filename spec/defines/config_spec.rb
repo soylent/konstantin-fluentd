@@ -3,9 +3,7 @@ require 'spec_helper'
 RSpec.describe 'fluentd::config' do
   let(:pre_condition) { 'include fluentd' }
 
-  context 'on RedHat based system' do
-    let(:facts) { { osfamily: 'RedHat' } }
-
+  context 'with redhat', :redhat do
     let(:title) { 'stdout.conf' }
 
     context 'when config contains nested hashes' do

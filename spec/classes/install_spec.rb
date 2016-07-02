@@ -7,27 +7,19 @@ RSpec.describe 'fluentd::install' do
     it { is_expected.to contain_file('/etc/td-agent/config.d') }
   end
 
-  context 'on RedHat based system' do
-    let(:facts) { { osfamily: 'RedHat' } }
+  context 'with redhat', :redhat do
+    include_examples 'package and configs'
 
     it { is_expected.to contain_yumrepo('treasuredata') }
-
-    include_examples 'package and configs'
   end
 
-  context 'on Debian based system' do
-    let(:facts) do
-      { osfamily: 'Debian', lsbdistid: 'Ubuntu', lsbdistcodename: 'trusty' }
-    end
+  context 'with debian', :debian do
+    include_examples 'package and configs'
 
     it { is_expected.to contain_apt__source('treasuredata') }
-
-    include_examples 'package and configs'
   end
 
-  context 'on unsupported system' do
-    let(:facts) { { osfamily: 'Darwin' } }
-
+  context 'with unsupported system', :darwin do
     it { is_expected.not_to compile }
   end
 end

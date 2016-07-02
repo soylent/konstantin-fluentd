@@ -4,17 +4,11 @@ RSpec.describe 'fluentd::plugin' do
   let(:pre_condition) { 'include fluentd' }
   let(:title) { 'fluent-plugin-test' }
 
-  context 'on RedHat based system' do
-    let(:facts) { { osfamily: 'RedHat' } }
-
+  context 'with redhat', :redhat do
     it { is_expected.to contain_package(title).with(provider: 'tdagent') }
   end
 
-  context 'on Debian based system' do
-    let(:facts) do
-      { osfamily: 'Debian', lsbdistid: 'Ubuntu', lsbdistcodename: 'trusty' }
-    end
-
+  context 'with debian', :debian do
     it { is_expected.to contain_package(title).with(provider: 'tdagent') }
   end
 end
