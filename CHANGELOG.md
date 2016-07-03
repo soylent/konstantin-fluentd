@@ -1,3 +1,10 @@
+## Unreleasd
+
+ - Deprecate param `plugin_names`
+ - Deprecate param `plugin_ensure`
+ - Deprecate param `plugin_source`
+ - Deprecate param `plugin_install_options`
+
 ## 2016-04-20 - Release v. 0.6.1
 
  - Remove rubygems package
