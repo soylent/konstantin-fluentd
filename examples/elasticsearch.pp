@@ -9,16 +9,17 @@ fluentd::config { '500_elasticsearch.conf':
         'type' => 'forward',
       },
       {
-        'type' => 'unix',
-        'path' => '/tmp/td-agent/td-agent.sock',
+        'type' => 'syslog',
+        'port' => 42185,
+        'tag'  => 'syslog',
       },
     ],
     'match'  => {
-      'tag_pattern'     => '**',
+      'tag_pattern'     => 'syslog.**',
       'type'            => 'elasticsearch',
+      'logstash_format' => true,
       'index_name'      => 'foo',
       'type_name'       => 'bar',
-      'logstash_format' => true,
     }
   }
 }
