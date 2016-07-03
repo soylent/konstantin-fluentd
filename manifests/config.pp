@@ -1,7 +1,7 @@
-define fluentd::config($config, $config_path='/etc/td-agent/config.d') {
-  $path = sprintf("${config_path}/%s", $title)
+define fluentd::config($config) {
+  include fluentd
 
-  file { $path:
+  file { "${fluentd::config_path}/${title}":
     ensure  => present,
     content => fluent_config($config),
     require => Class['Fluentd::Install'],
