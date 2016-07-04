@@ -150,6 +150,14 @@ Default value: true
 
 Default value: '/etc/td-agent/td-agent.conf'
 
+#### `config_owner`
+
+Default value: 'td-agent'
+
+#### `config_group`
+
+Default value: 'td-agent'
+
 ### Public Defines
 
 * `fluentd::config`: Generates custom configuration files.

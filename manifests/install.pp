@@ -9,8 +9,8 @@ class fluentd::install inherits fluentd {
 
   file { $fluentd::config_path:
     ensure  => directory,
-    owner   => 'root',
-    group   => 'root',
+    owner   => $fluentd::config_owner,
+    group   => $fluentd::config_group,
     mode    => '0750',
     recurse => true,
     force   => true,
@@ -20,8 +20,8 @@ class fluentd::install inherits fluentd {
   file { $fluentd::config_file:
     ensure => present,
     source => 'puppet:///modules/fluentd/td-agent.conf',
-    owner  => 'root',
-    group  => 'root',
+    owner  => $fluentd::config_owner,
+    group  => $fluentd::config_group,
     mode   => '0640',
   }
 }
