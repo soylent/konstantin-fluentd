@@ -23,6 +23,8 @@ class fluentd (
   $service_manage = $::fluentd::params::service_manage,
   $config_file = $::fluentd::params::config_file,
   $config_path = $::fluentd::params::config_path,
+  $config_owner = $::fluentd::params::config_owner,
+  $config_group = $::fluentd::params::config_group,
 ) inherits fluentd::params {
 
   # Param validations
@@ -43,6 +45,8 @@ class fluentd (
   validate_bool($service_enable)
   validate_bool($service_manage)
   validate_absolute_path($config_file)
+  validate_string($config_owner)
+  validate_string($config_group)
 
   contain fluentd::install
   contain fluentd::service
