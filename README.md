@@ -143,6 +143,10 @@ Default value: 'td-agent'
 
 Default value: present
 
+#### `plugin_provider`
+
+Default value: tdagent
+
 #### `service_name`
 
 Default value: 'td-agent'
@@ -158,6 +162,13 @@ Default value: true
 #### `service_manage`
 
 Default value: true
+
+#### `service_provider`
+
+Default value:
+
+  - when `$::osfamily == 'redhat'`: redhat
+  - otherwise: undef
 
 #### `config_file`
 
