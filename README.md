@@ -12,9 +12,20 @@ Install, configure, and manage Fluentd data collector.
 * Manages `td-agent` service
 * Installs Fluentd gem plugins
 
-## Usage
+## Usage Examples
+
+### Basic
+
+Install and start the service.
+
+```puppet
+class { 'fluentd': }
+```
 
 ### Routing Events To Elasticsearch
+
+Receive logs from other Fluentd instances and via UNIX domain socket. Forward
+the logs to Elasticsearch.
 
 ```puppet
 include fluentd
@@ -44,6 +55,8 @@ fluentd::config { '500_elasticsearch.conf':
 ```
 
 ### Forwarding Events To Fluentd Aggregator
+
+Read logs from UNIX domain socket, then forward them to Fluentd aggregators.
 
 ```puppet
 include fluentd
