@@ -241,8 +241,6 @@ Bug reports and pull requests are welcome!
     $ bundle exec rake beaker BEAKER_set=debian-7-amd64
     $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
 
-Relevant Beaker docs: https://github.com/puppetlabs/beaker/blob/master/docs/How-to-Write-a-Beaker-Test-for-a-Module.md
-
 ## License
 
 Copyright 2015–2016 SPB TV AG
