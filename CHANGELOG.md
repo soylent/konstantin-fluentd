@@ -1,5 +1,9 @@
 ## Unreleasd
 
+ - Add param `service_provider` (@larsks)
+ - Plugin version can be specified (@denis-sorokin)
+ - Add params `config_path` and `plugin_provider` (@paramite)
+ - Add params `config_owner` and `config_group` (@MartinMeinhold)
  - Deprecate param `plugin_names`
  - Deprecate param `plugin_ensure`
  - Deprecate param `plugin_source`
