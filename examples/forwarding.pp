@@ -10,8 +10,14 @@ fluentd::config { '600_forwarding.conf':
       'tag_pattern' => '**',
       'type'        => forward,
       'server'      => [
-        { 'host' => 'example1.com', 'port' => 24224 },
-        { 'host' => 'example2.com', 'port' => 24224 },
+        {
+          'host' => 'example1.com',
+          'port' => 24224
+        },
+        {
+          'host' => 'example2.com',
+          'port' => 24224
+        },
       ]
     }
   }
