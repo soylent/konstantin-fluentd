@@ -16,7 +16,8 @@ RSpec.shared_context 'debian', :debian do
       osfamily: 'Debian',
       lsbdistid: 'Ubuntu',
       lsbdistcodename: 'trusty',
-      lsbdistrelease: '14.04'
+      lsbdistrelease: '14.04',
+      puppetversion: Puppet.version
     }
   end
 end
