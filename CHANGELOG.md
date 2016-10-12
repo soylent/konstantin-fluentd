@@ -1,4 +1,4 @@
-## Unreleasd
+## 2016-10-13 - Release v. 0.7.0
 
  - Add param `service_provider` (@larsks)
  - Plugin version can be specified (@denis-sorokin)
