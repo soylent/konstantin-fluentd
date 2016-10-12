@@ -232,14 +232,14 @@ Bug reports and pull requests are welcome!
 ### Running Tests
 
     $ bundle install
-    $ bundle exec rake lint
-    $ bundle exec rake metadata
-    $ bundle exec rake spec
-    $ bundle exec rspec spec/lib
-    $ bundle exec rake beaker BEAKER_set=centos-6-x64
-    $ bundle exec rake beaker BEAKER_set=centos-7-x64
-    $ bundle exec rake beaker BEAKER_set=debian-7-amd64
-    $ bundle exec rake beaker BEAKER_set=ubuntu-server-1404-x64
+    $ bin/rake lint
+    $ bin/rake metadata
+    $ bin/rake spec
+    $ bin/rspec spec/lib
+    $ bin/rake beaker BEAKER_set=centos-6-x64
+    $ bin/rake beaker BEAKER_set=centos-7-x64
+    $ bin/rake beaker BEAKER_set=debian-7-amd64
+    $ bin/rake beaker BEAKER_set=ubuntu-server-1404-x64
 
 ## License
 
