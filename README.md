@@ -174,6 +174,10 @@ Default value:
 
 Default value: '/etc/td-agent/td-agent.conf'
 
+#### `config_path`
+
+Default value: '/etc/td-agent/config.d'
+
 #### `config_owner`
 
 Default value: 'td-agent'
