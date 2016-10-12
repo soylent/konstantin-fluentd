@@ -1,0 +1,9 @@
+/Gemfile
+/Gemfile.lock
+/Rakefile
+/TODO
+/log/
+/pkg/
+/examples/
+/junit/
+/spec/
