@@ -2,6 +2,8 @@
 
  - Add param `plugins`
  - Add param `configs`
+ - Remove deprecated params `plugin_names`, `plugin_ensure`, `plugin_source`,
+   `plugin_provider`, `plugin_install_options`
 
 ## 2016-10-13 - Release v. 0.7.0
 
@@ -12,6 +14,7 @@
  - Deprecate param `plugin_names`
  - Deprecate param `plugin_ensure`
  - Deprecate param `plugin_source`
+ - Deprecate param `plugin_provider`
  - Deprecate param `plugin_install_options`
 
 ## 2016-04-20 - Release v. 0.6.1

@@ -1,10 +1,12 @@
 define fluentd::plugin(
-  $plugin_ensure          = $::fluentd::_plugin_ensure,
-  $plugin_source          = $::fluentd::_plugin_source,
-  $plugin_install_options = $::fluentd::_plugin_install_options,
-  $plugin_provider        = $::fluentd::_plugin_provider,
+  $plugin_ensure          = present,
+  $plugin_source          = 'https://rubygems.org',
+  $plugin_install_options = [],
+  $plugin_provider        = tdagent,
 ) {
-  include fluentd
+  validate_string($plugin_ensure)
+  validate_string($plugin_source)
+  validate_string($plugin_provider)
 
   package { $title:
     ensure          => $plugin_ensure,
