@@ -86,9 +86,9 @@ Defining Fluentd resources in Hiera.
 ```yaml
 fluentd::plugins:
   'fluent-plugin-http':
-    ensure: 0.1.0
+    plugin_ensure: 0.1.0
   'fluent-plugin-elasticsearch':
-    ensure: present
+    plugin_ensure: present
 fluentd::configs:
   '100_fwd.conf':
     config:
