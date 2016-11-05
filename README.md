@@ -79,6 +79,28 @@ fluentd::config { '600_forwarding.conf':
 }
 ```
 
+### Hiera Support
+
+Defining Fluentd resources in Hiera.
+
+```yaml
+fluentd::plugins:
+  'fluent-plugin-http':
+    ensure: 0.1.0
+  'fluent-plugin-elasticsearch':
+    ensure: present
+fluentd::configs:
+  '100_fwd.conf':
+    config:
+      source:
+        type: forward
+  '200_stdout.conf':
+    config:
+      match:
+        tag_pattern: test
+        type: stdout
+```
+
 ### Config File Naming
 
 All configs employ a numbering system in the resource's title that is used for
@@ -185,6 +207,14 @@ Default value: 'td-agent'
 #### `config_group`
 
 Default value: 'td-agent'
+
+#### `configs`
+
+Default value: {}
+
+#### `plugins`
+
+Default value: {}
 
 ### Public Defines
 

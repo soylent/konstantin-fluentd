@@ -2,6 +2,7 @@ require 'spec_helper'
 
 RSpec.describe 'fluentd::plugin' do
   let(:pre_condition) { 'include fluentd' }
+
   let(:title) { 'fluent-plugin-test' }
 
   context 'with redhat', :redhat do
