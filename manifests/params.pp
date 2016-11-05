@@ -50,4 +50,6 @@ class fluentd::params {
   $config_path = '/etc/td-agent/config.d'
   $config_owner = 'td-agent'
   $config_group = 'td-agent'
+
+  $plugins = {}
 }

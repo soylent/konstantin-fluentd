@@ -26,6 +26,7 @@ class fluentd (
   $config_path = $::fluentd::params::config_path,
   $config_owner = $::fluentd::params::config_owner,
   $config_group = $::fluentd::params::config_group,
+  $plugins = $::fluentd::params::plugins,
 ) inherits fluentd::params {
 
   validate_bool($repo_install)
@@ -86,4 +87,6 @@ class fluentd (
 
   Class['Fluentd::Install'] ->
   Class['Fluentd::Service']
+
+  create_resources('fluentd::plugin', $plugins)
 }
