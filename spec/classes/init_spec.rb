@@ -24,4 +24,13 @@ RSpec.describe 'fluentd' do
 
     it { is_expected.to contain_fluentd__plugin(plugin_name).with(plugin_params) }
   end
+
+  context 'with configs', :redhat do
+    let(:params) { { configs: { config_name => config_params } } }
+
+    let(:config_name) { '100_fwd.conf' }
+    let(:config_params) { { 'config' => { 'source' => { 'type' => 'forward' } } } }
+
+    it { is_expected.to contain_fluentd__config(config_name).with(config_params) }
+  end
 end

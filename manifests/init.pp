@@ -26,6 +26,7 @@ class fluentd (
   $config_path = $::fluentd::params::config_path,
   $config_owner = $::fluentd::params::config_owner,
   $config_group = $::fluentd::params::config_group,
+  $configs = $::fluentd::params::configs,
   $plugins = $::fluentd::params::plugins,
 ) inherits fluentd::params {
 
@@ -89,4 +90,5 @@ class fluentd (
   Class['Fluentd::Service']
 
   create_resources('fluentd::plugin', $plugins)
+  create_resources('fluentd::config', $configs)
 }

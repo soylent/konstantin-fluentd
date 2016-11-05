@@ -89,6 +89,16 @@ fluentd::plugins:
     ensure: 0.1.0
   'fluent-plugin-elasticsearch':
     ensure: present
+fluentd::configs:
+  '100_fwd.conf':
+    config:
+      source:
+        type: forward
+  '200_stdout.conf':
+    config:
+      match:
+        tag_pattern: test
+        type: stdout
 ```
 
 ### Config File Naming
@@ -197,6 +207,10 @@ Default value: 'td-agent'
 #### `config_group`
 
 Default value: 'td-agent'
+
+#### `configs`
+
+Default value: {}
 
 #### `plugins`
 
