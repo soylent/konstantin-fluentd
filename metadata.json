@@ -3,11 +3,11 @@
     "dependencies": [
         {
             "name": "puppetlabs/stdlib",
-            "version_requirement": ">= 1.0.0"
+            "version_requirement": "4.x"
         },
         {
             "name": "puppetlabs/apt",
-            "version_requirement": ">= 1.0.0"
+            "version_requirement": "2.x"
         }
     ],
     "issues_url": "https://github.com/soylent/konstantin-fluentd/issues",
@@ -41,7 +41,6 @@
         "fluentd",
         "fluent",
         "td-agent",
-        "treasuredata",
         "logging"
     ],
     "version": "0.7.0"
