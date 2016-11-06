@@ -165,10 +165,6 @@ Default value: 'td-agent'
 
 Default value: present
 
-#### `plugin_provider`
-
-Default value: tdagent
-
 #### `service_name`
 
 Default value: 'td-agent'
@@ -234,6 +230,10 @@ Default value: present
 #### `plugin_source`
 
 Default value: 'https://rubygems.org'
+
+#### `plugin_provider`
+
+Default value: tdagent
 
 #### `plugin_install_options`
 
