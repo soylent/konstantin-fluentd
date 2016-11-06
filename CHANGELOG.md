@@ -1,4 +1,4 @@
-## Unreleased
+## 2016-11-06 - Release v. 0.8.0
 
  - Add param `plugins`
  - Add param `configs`
