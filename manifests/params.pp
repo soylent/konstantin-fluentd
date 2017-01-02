@@ -22,7 +22,7 @@ class fluentd::params {
   $repo_enabled = true
   $repo_gpgcheck = true
   $repo_gpgkey = 'https://packages.treasuredata.com/GPG-KEY-td-agent'
-  $repo_gpgkeyid = 'C901622B5EC4AF820C38AB861093DB45A12E206F'
+  $repo_gpgkeyid = 'BEE682289B2217F45AF4CC3F901F9177AB97ACBE'
 
   $package_name = 'td-agent'
   $package_ensure = present
