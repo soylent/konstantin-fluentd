@@ -33,6 +33,8 @@ class fluentd::install_repo inherits fluentd {
           'deb' => true,
         },
       }
+
+      Class['Apt::Update'] -> Package[$fluentd::package_name]
     }
 
     default: {
