@@ -267,7 +267,7 @@ Bug reports and pull requests are welcome!
 
     $ bundle install
     $ bin/rake lint
-    $ bin/rake metadata
+    $ bin/rake metadata_lint
     $ bin/rake spec
     $ bin/rspec spec/lib
     $ bin/rake beaker BEAKER_set=centos-6-x64
