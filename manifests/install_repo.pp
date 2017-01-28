@@ -1,5 +1,5 @@
 class fluentd::install_repo inherits fluentd {
-  case $::osfamily {
+  case $facts['osfamily'] {
     'redhat': {
       yumrepo { $fluentd::repo_name:
         descr    => $fluentd::repo_desc,
@@ -38,7 +38,7 @@ class fluentd::install_repo inherits fluentd {
     }
 
     default: {
-      fail("Unsupported osfamily ${::osfamily}")
+      fail("Unsupported os family: ${facts['osfamily']}")
     }
   }
 }
