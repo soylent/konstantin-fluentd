@@ -185,7 +185,7 @@ Default value: true
 
 Default value:
 
-  - when `$::osfamily == 'redhat'`: redhat
+  - when `$facts['osfamily'] == 'redhat'`: redhat
   - otherwise: undef
 
 #### `config_file`

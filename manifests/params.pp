@@ -3,19 +3,19 @@ class fluentd::params {
   $repo_name = 'treasuredata'
   $repo_desc = 'TreasureData'
 
-  case $::osfamily {
+  case $facts['osfamily'] {
     'redhat': {
       $repo_url = 'http://packages.treasuredata.com/2/redhat/$releasever/$basearch'
     }
 
     'debian': {
-      $distro_id = downcase($::lsbdistid)
-      $distro_codename = $::lsbdistcodename
+      $distro_id = downcase($facts['lsbdistid'])
+      $distro_codename = $facts['lsbdistcodename']
       $repo_url = "http://packages.treasuredata.com/2/${distro_id}/${distro_codename}/"
     }
 
     default: {
-      fail("Unsupported osfamily ${::osfamily}")
+      fail("Unsupported osfamily ${facts['osfamily']}")
     }
   }
 
@@ -34,7 +34,7 @@ class fluentd::params {
 
   # NOTE: Workaround for the following issue:
   # https://tickets.puppetlabs.com/browse/PUP-5296
-  if $::osfamily == 'redhat' {
+  if $facts['osfamily'] == 'redhat' {
     $service_provider = 'redhat'
   } else {
     $service_provider = undef
