@@ -1,3 +1,8 @@
+## 2017-01-28 - Release v. 0.9.0
+
+ - Use Puppet 4 data types
+ - Run apt update before installing packages
+
 ## 2016-11-06 - Release v. 0.8.0
 
  - Add param `plugins`
