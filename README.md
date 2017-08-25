@@ -242,7 +242,7 @@ see https://docs.puppetlabs.com/puppet/latest/reference/type.html#package-provid
 e.g.
 
 ```puppet
-plugin_install_options => {'--http-proxy' => $http_proxy}`
+plugin_install_options => [{'--http-proxy' => $http_proxy}]
 ```
 
 The following parameters are available in the `fluentd::config` defined type:
