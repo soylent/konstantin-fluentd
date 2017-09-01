@@ -1,6 +1,6 @@
 RSpec.shared_context 'redhat', :redhat do
   let(:facts) do
-    { osfamily: 'RedHat' }
+    { operatingsystem: 'CentOS', osfamily: 'RedHat' }
   end
 end
 
