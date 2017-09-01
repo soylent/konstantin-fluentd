@@ -16,8 +16,14 @@ RSpec.shared_context 'debian', :debian do
       osfamily: 'Debian',
       lsbdistid: 'Ubuntu',
       lsbdistcodename: 'trusty',
-      lsbdistrelease: '14.04',
-      puppetversion: Puppet.version
+      # NOTE: Module `puppetlabs/apt` uses structured facts
+      # Please see: https://tickets.puppetlabs.com/browse/MODULES-4792
+      os: {
+        name: 'Ubuntu',
+        release: {
+          full: '14.04'
+        }
+      }
     }
   end
 end
