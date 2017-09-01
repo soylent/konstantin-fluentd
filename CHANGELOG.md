@@ -1,3 +1,8 @@
+## 2017-09-01 - Release v. 0.10.0
+
+- Update version requirements for `puppetlabs/stdlib`
+- Update version requirements for `puppetlabs/apt`
+
 ## 2017-01-28 - Release v. 0.9.0
 
  - Use Puppet 4 data types
