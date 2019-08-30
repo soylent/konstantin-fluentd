@@ -1,11 +1,11 @@
 HOSTS:
-  debian-7-amd64:
-    platform: debian-7-amd64
-    image: debian:7
+  debian-10-amd64:
+    platform: debian-10-amd64
+    image: debian:10.0
     hypervisor: docker
     docker_preserve_image: true
     docker_image_commands:
-      - 'apt-get install -y wget'
+      - 'apt-get install -y wget gcc make'
 CONFIG:
   log_level: verbose
   type: foss

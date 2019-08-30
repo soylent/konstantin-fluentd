@@ -272,7 +272,7 @@ Bug reports and pull requests are welcome!
     $ bin/rspec spec/lib
     $ bin/rake beaker BEAKER_set=centos-6-x64
     $ bin/rake beaker BEAKER_set=centos-7-x64
-    $ bin/rake beaker BEAKER_set=debian-7-amd64
+    $ bin/rake beaker BEAKER_set=debian-10-amd64
     $ bin/rake beaker BEAKER_set=ubuntu-server-1404-x64
 
 ## License

@@ -4,6 +4,8 @@ HOSTS:
     image: ubuntu:14.04
     hypervisor: docker
     docker_preserve_image: true
+    docker_image_commands:
+      - 'apt-get install -y gcc make'
 CONFIG:
   log_level: verbose
   type: foss

@@ -1,12 +1,12 @@
 HOSTS:
   centos-7-x64:
     platform: el-7-x86_64
-    image: centos:7
+    image: centos:7.6.1810
     hypervisor: docker
     docker_preserve_image: true
     docker_cmd: '["/sbin/init"]'
     docker_image_commands:
-      - 'yum install -y initscripts'
+      - 'yum install -y initscripts gcc make'
 CONFIG:
   log_level: verbose
   type: foss
